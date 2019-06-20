@@ -30,8 +30,8 @@ class Article {
     else if (this.expandButton.textContent === 'collapse') {
       this.expandButton.textContent = 'expand'
     }
-    console.log(this.domElement.scrollHeight)
-    console.log(this.domElement.style.height)
+    // console.log(this.domElement.scrollHeight)
+    // console.log(this.domElement.style.height)
   }
 
   closeArticle() {
