@@ -8,10 +8,10 @@
   border-radius: 10px;
   background-color: white;
   position: relative;
-  height: 50px;
+  max-height: 50px;
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
 
   h2 {
     font-size: 28px;
@@ -43,13 +43,13 @@
 }
 
 .article-open {
-  height: 400px;
-  animation: slideDown 0.5
+  max-height: 1000px;
+  animation: slideDown 1s;
 }
 
 @keyframes slideDown {
-  from {height: 50px;}
-  to {height: 400px;}
+  from {max-height: 50px;}
+  to {max-height: 1000px;}
 }
 
 .article-read {
