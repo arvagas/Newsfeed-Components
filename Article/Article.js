@@ -138,9 +138,11 @@ function createArticle (artData) {
   const paraTwo = document.createElement('p')
   const paraThree = document.createElement('p')
   const expandBtn = document.createElement('span')
+  const readBtn = document.createElement('button')
 
   // Structure of elements
   article.appendChild(title)
+  article.appendChild(readBtn)
   article.appendChild(date)
   article.appendChild(paraOne)
   article.appendChild(paraTwo)
@@ -151,6 +153,7 @@ function createArticle (artData) {
   article.classList.add('article')
   date.classList.add('date')
   expandBtn.classList.add('expandButton')
+  readBtn.classList.add('close')
 
   // Inserting text
   title.textContent = artData.title
@@ -159,6 +162,7 @@ function createArticle (artData) {
   paraTwo.textContent = artData.secondParagraph
   paraThree.textContent = artData.thirdParagraph
   expandBtn.textContent = 'expand'
+  readBtn.textContent = 'Read'
 
   // Button event
   expandBtn.addEventListener('click', () => {
@@ -168,6 +172,10 @@ function createArticle (artData) {
     // Change name of button depending on state
     if (expandBtn.textContent === 'expand') expandBtn.textContent = 'collapse'
     else expandBtn.textContent = 'expand'
+  })
+
+  readBtn.addEventListener('click', () => {
+    article.classList.add('article-read')
   })
 
   return article
