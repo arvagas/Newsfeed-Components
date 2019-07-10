@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Snape kills Jon Snow',
+    date: 'Oct. 21, 2015',
+    firstParagraph: `Walter White is Superman in disguise!`,
+
+    secondParagraph: `Pikachu beats Goku in chess!`,
+
+    thirdParagraph: `Darth Vader controls Precious!`
   }
 ];
 
@@ -114,11 +123,12 @@ const data = [
 */
 const articles = document.querySelector('.articles')
 
+// Create an article for each object in data object
 data.forEach(article => {
   articles.appendChild(createArticle(article))
 })
 
-
+// Function to create a new article for each sets of data in inputted object array
 function createArticle (artData) {
   // Define new elements
   console.log(artData)
@@ -150,6 +160,16 @@ function createArticle (artData) {
   paraTwo.textContent = artData.secondParagraph
   paraThree.textContent = artData.thirdParagraph
   expandBtn.textContent = 'expand'
+
+  // Button event
+  expandBtn.addEventListener('click', event => {
+    // Toggle open
+    article.classList.toggle('article-open')
+
+    // Change name of button depending on state
+    if (expandBtn.textContent === 'expand') expandBtn.textContent = 'collapse'
+    else expandBtn.textContent = 'expand'
+  })
 
   return article
 }
