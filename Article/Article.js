@@ -131,7 +131,6 @@ data.forEach(article => {
 // Function to create a new article for each sets of data in inputted object array
 function createArticle (artData) {
   // Define new elements
-  console.log(artData)
   const article = document.createElement('div')
   const title = document.createElement('h2')
   const date = document.createElement('p')

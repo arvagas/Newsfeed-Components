@@ -33,3 +33,23 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+const header = document.querySelector('.header')
+
+header.appendChild(sideMenu(menuItems))
+
+// Function to create a new menu utilizing inputted object array for nav items
+function sideMenu(navItems) {
+  // Define new elements
+  const menu = document.createElement('div')
+  const uList = document.createElement('ul')
+  const listItem = document.createElement('li')
+
+  // Structure of elements
+  menu.appendChild(uList)
+  uList.appendChild(listItem)
+
+  // Setting up class names
+  menu.classList.add('menu')
+
+  return menu
+}
