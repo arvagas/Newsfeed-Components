@@ -42,14 +42,25 @@ function sideMenu(navItems) {
   // Define new elements
   const menu = document.createElement('div')
   const uList = document.createElement('ul')
-  const listItem = document.createElement('li')
+
+  // Using the array inputted, run through each item, create a new 'li', assign text of item into 'li', then append it to the unordered list
+  navItems.forEach(item => {
+    const listItem = document.createElement('li')
+    listItem.textContent = item
+    uList.appendChild(listItem)
+  })
 
   // Structure of elements
   menu.appendChild(uList)
-  uList.appendChild(listItem)
 
   // Setting up class names
   menu.classList.add('menu')
+
+  // Button events
+  const menuButton = document.querySelector('.menu-button')
+  menuButton.addEventListener('click', () => {
+    menu.classList.toggle('menu--open')
+  })
 
   return menu
 }

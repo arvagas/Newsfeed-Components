@@ -161,7 +161,7 @@ function createArticle (artData) {
   expandBtn.textContent = 'expand'
 
   // Button event
-  expandBtn.addEventListener('click', event => {
+  expandBtn.addEventListener('click', () => {
     // Toggle open
     article.classList.toggle('article-open')
 
