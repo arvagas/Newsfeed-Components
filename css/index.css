@@ -48,6 +48,7 @@
   height: 50px;
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
+  transition: all 0.5s ease;
 }
 .article h2 {
   font-size: 28px;
@@ -75,6 +76,15 @@
 }
 .article-open {
   height: 400px;
+  animation: slideDown 0.5;
+}
+@keyframes slideDown {
+  from {
+    height: 50px;
+  }
+  to {
+    height: 400px;
+  }
 }
 .article-read {
   display: none;

@@ -73,6 +73,6 @@ function sideMenu(navItems) {
 }
 
 const knightToggle = document.querySelector('li:last-child')
-knightToggle.addEventListener('click', event =>{
+knightToggle.addEventListener('click', () =>{
   document.querySelector('html').classList.toggle('knight-mode-menu')
 })
