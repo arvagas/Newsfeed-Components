@@ -62,5 +62,11 @@ function sideMenu(navItems) {
     menu.classList.toggle('menu--open')
   })
 
+  document.addEventListener('click', event =>{
+    if (menu.classList.contains('menu--open') === false) return
+    else if ((event.target === menu) || (event.target === uList) || (event.target.tagName === 'LI') || (event.target === menuButton)) return
+    else menu.classList.toggle('menu--open') 
+  })
+
   return menu
 }
