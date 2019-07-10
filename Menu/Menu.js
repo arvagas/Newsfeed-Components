@@ -6,7 +6,8 @@ let menuItems = [
   "What's New",
   'Tech Trends',
   'Music',
-  'Log Out'
+  'Log Out',
+  'Knight Mode'
 ];
 
 /* 
@@ -70,3 +71,8 @@ function sideMenu(navItems) {
 
   return menu
 }
+
+const knightToggle = document.querySelector('li:last-child')
+knightToggle.addEventListener('click', event =>{
+  document.querySelector('html').classList.toggle('knight-mode-menu')
+})

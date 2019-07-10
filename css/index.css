@@ -119,6 +119,30 @@
     margin-left: 0px;
   }
 }
+.knight-mode-menu {
+  background-color: black;
+}
+.knight-mode-menu body {
+  background-color: black;
+}
+.knight-mode-menu .header {
+  color: black;
+  background-color: yellow;
+}
+.knight-mode-menu .menu {
+  color: black;
+  background-color: yellow;
+}
+.knight-mode-menu .article {
+  background-color: yellow;
+}
+.knight-mode-menu .expandButton {
+  background-color: yellow;
+}
+.knight-mode-menu .close {
+  background-color: black;
+  color: yellow;
+}
 html,
 body {
   margin: 0;
