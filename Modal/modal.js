@@ -81,6 +81,11 @@ function modalArticleInput() {
     modal.classList.toggle('modal-show')
     modalBackdrop.classList.toggle('show')
     document.querySelector('body').removeChild(modalBackdrop)
+    titleInput.value = ''
+    dateInput.value= ''
+    paraOneInput.value = ''
+    paraTwoInput.value = ''
+    paraThreeInput.value = ''
   })
 
   // If user clicks on close button, turn off modal
@@ -89,6 +94,11 @@ function modalArticleInput() {
     modal.classList.toggle('modal-show')
     modalBackdrop.classList.toggle('show')
     document.querySelector('body').removeChild(modalBackdrop)
+    titleInput.value = ''
+    dateInput.value= ''
+    paraOneInput.value = ''
+    paraTwoInput.value = ''
+    paraThreeInput.value = ''
   })
 
   // If user clicks on background, turn off modal
@@ -99,6 +109,11 @@ function modalArticleInput() {
     modal.classList.toggle('modal-show')
     modalBackdrop.classList.toggle('show')
     document.querySelector('body').removeChild(modalBackdrop)
+    titleInput.value = ''
+    dateInput.value= ''
+    paraOneInput.value = ''
+    paraTwoInput.value = ''
+    paraThreeInput.value = ''
   })
 
   return modal
