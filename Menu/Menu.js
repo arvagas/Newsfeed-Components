@@ -73,11 +73,6 @@ function sideMenu(navItems) {
   return menu
 }
 
-const newArticle = document.querySelector('li:nth-last-child(2)')
-newArticle.addEventListener('click', () =>{
-  alert('New Article select functional')
-})
-
 const knightToggle = document.querySelector('li:last-child')
 knightToggle.addEventListener('click', () =>{
   document.querySelector('html').classList.toggle('knight-mode-menu')
