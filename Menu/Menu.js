@@ -7,7 +7,8 @@ let menuItems = [
   'Tech Trends',
   'Music',
   'Log Out',
-  'Knight Mode'
+  'New Article',
+  'Knight Mode',
 ];
 
 /* 

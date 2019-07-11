@@ -180,3 +180,42 @@ function createArticle (artData) {
 
   return article
 }
+
+// opens a modal for user input
+function modalArticleInput() {
+  //Define new elements
+  const modal = document.createElement('div')
+  const modalContent = document.createElement('div')
+  const title = document.createElement('h2')
+  const titleInput = document.createElement('input')
+  const date = document.createElement('h2')
+  const dateInput = document.createElement('input')
+  const paraOne = document.createElement('h2')
+  const paraOneInput = document.createElement('input')
+  const paraTwo = document.createElement('ph2')
+  const paraTwoInput = document.createElement('input')
+  const paraThree = document.createElement('h2')
+  const paraThreeInput = document.createElement('input')
+  const closeBtn = document.createElement('span')
+  const saveBtn = document.createElement('span')
+
+  // Set attributes
+  titleInput.type = 'text'
+  dateInput.type = 'text'
+  paraOneInput.type = 'text'
+  paraTwoInput.type = 'text'
+  paraThreeInput.type = 'text'
+
+  // Structure of elements
+  modal.appendChild(modalContent)
+  modalContent.appendChild(title)
+  modalContent.appendChild(titleInput)
+  modalContent.appendChild(date)
+  modalContent.appendChild(dateInput)
+  modalContent.appendChild(paraOne)
+  modalContent.appendChild(paraOneInput)
+  modalContent.appendChild(paraTwo)
+  modalContent.appendChild(paraTwoInput)
+  modalContent.appendChild(paraThree)
+  modalContent.appendChild(paraThreeInput)
+}
