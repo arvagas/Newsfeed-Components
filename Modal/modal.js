@@ -74,7 +74,15 @@ function modalArticleInput() {
   
   // Button events
 
-  document.addEventListener('click', event =>{
+  // If user clicks on close button, turn off modal
+  closeBtn.addEventListener('click', event =>{
+    modal.classList.toggle('modal-show')
+    modalBackdrop.classList.toggle('show')
+    document.querySelector('body').removeChild(modalBackdrop)
+  })
+
+  // If user clicks on background, turn off modal
+  modal.addEventListener('click', event =>{
     if (modal.classList.contains('modal-show') === false) return
     else if ((event.target.closest('.modal-content')) || (event.target === document.querySelector('li:nth-last-child(2)'))) return
     else modal.classList.toggle('modal-show')
@@ -95,8 +103,4 @@ newArticle.addEventListener('click', () =>{
   document.querySelector('body').appendChild(modalBackdrop)
   modalBackdrop.classList.toggle('show')
   document.querySelector('.modal').classList.toggle('modal-show')
-})
-
-window.addEventListener('click', event => {
-    console.log(event.target)
 })
