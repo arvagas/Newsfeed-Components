@@ -74,8 +74,18 @@ function modalArticleInput() {
   
   // Button events
 
+  // If user clicks on save button, save new article into data object, turn off modal
+  saveBtn.addEventListener('click', () =>{
+    createNewArticle(titleInput.value, dateInput.value, paraOneInput.value, paraTwoInput.value, paraThreeInput.value)
+    document.querySelector('body').classList.toggle('modal-open')
+    modal.classList.toggle('modal-show')
+    modalBackdrop.classList.toggle('show')
+    document.querySelector('body').removeChild(modalBackdrop)
+  })
+
   // If user clicks on close button, turn off modal
-  closeBtn.addEventListener('click', event =>{
+  closeBtn.addEventListener('click', () =>{
+    document.querySelector('body').classList.toggle('modal-open')
     modal.classList.toggle('modal-show')
     modalBackdrop.classList.toggle('show')
     document.querySelector('body').removeChild(modalBackdrop)
@@ -85,7 +95,8 @@ function modalArticleInput() {
   modal.addEventListener('click', event =>{
     if (modal.classList.contains('modal-show') === false) return
     else if ((event.target.closest('.modal-content')) || (event.target === document.querySelector('li:nth-last-child(2)'))) return
-    else modal.classList.toggle('modal-show')
+    else document.querySelector('body').classList.toggle('modal-open')
+    modal.classList.toggle('modal-show')
     modalBackdrop.classList.toggle('show')
     document.querySelector('body').removeChild(modalBackdrop)
   })
