@@ -64,9 +64,13 @@ function modalArticleInput() {
   modalDialog.classList.add('modal-dialog')
   modalContent.classList.add('modal-content')
   modalHeader.classList.add('modal-header')
+  modalBody.classList.add('modal-body')
   paraOneInput.classList.add('paraInput')
   paraTwoInput.classList.add('paraInput')
   paraThreeInput.classList.add('paraInput')
+  modalFooter.classList.add('modal-footer')
+  closeBtn.classList.add('btn')
+  saveBtn.classList.add('btn', 'btn-primary')
   
   // Button events
 
@@ -74,6 +78,7 @@ function modalArticleInput() {
     if (modal.classList.contains('modal-show') === false) return
     else if ((event.target.closest('.modal-content')) || (event.target === document.querySelector('li:nth-last-child(2)'))) return
     else modal.classList.toggle('modal-show')
+    modalBackdrop.classList.toggle('show')
     document.querySelector('body').removeChild(modalBackdrop)
   })
 
