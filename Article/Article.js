@@ -180,3 +180,18 @@ function createArticle (artData) {
 
   return article
 }
+
+function createNewArticle(userTitle, userDate, userFirst, userSecond, userThird) {
+  const newData = []
+  newData.push({
+    title:userTitle,
+    date:userDate,
+    firstParagraph:userFirst,
+    secondParagraph:userSecond,
+    thirdParagraph:userThird
+  })
+  
+  newData.forEach(article => {
+    articles.appendChild(createArticle(article))
+  })
+}
